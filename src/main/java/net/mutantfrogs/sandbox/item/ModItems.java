@@ -14,7 +14,7 @@ public class ModItems{
 
     //list of all items
     public static final Item HANDCANNON = registerItem("handcannon", new HandCannonItem(new FabricItemSettings()));
-    public static final Item DROOPY = registerItem("droopy", new MusicDiscItem(7, ModSounds.DROOPY, new FabricItemSettings().maxCount(1), 122));
+    public static final Item DROOPY = registerItem("droopy", new MusicDiscItem(7, ModSounds.DROOPY, new FabricItemSettings().maxCount(1), 210));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(Sandbox.MOD_ID, name), item);

@@ -16,7 +16,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.sandbox"))
                     .icon(() -> new ItemStack(Items.SAND)).entries((displayContext, entries) -> {
                         entries.add(ModItems.HANDCANNON);
-                        entries.add(ModItems.DROOPY);
+                        entries.add(ModItems.DROOPY );
 
                     }).build());
 
