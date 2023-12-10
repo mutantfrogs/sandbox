@@ -1,0 +1,25 @@
+package net.mutantfrogs.sandbox.item;
+
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+import net.mutantfrogs.sandbox.Sandbox;
+
+public class ModItemGroups {
+    public static final ItemGroup SANDBOX_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(Sandbox.MOD_ID, "ruby"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.sandbox"))
+                    .icon(() -> new ItemStack(Items.SAND)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.HANDCANNON);
+
+                    }).build());
+
+    public static void registerItemGroups() {
+        Sandbox.LOGGER.info("Registering Item Groups for " + Sandbox.MOD_ID);
+    }
+}
