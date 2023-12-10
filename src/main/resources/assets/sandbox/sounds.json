@@ -2,7 +2,7 @@
   "droopy": {
     "sounds": [
       {
-        "name": "sandbox.droopy",
+        "name": "sandbox:droopy",
         "stream": true
       }
     ]
