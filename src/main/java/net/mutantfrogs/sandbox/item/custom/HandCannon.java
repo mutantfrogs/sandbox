@@ -42,7 +42,7 @@ public class HandCannon extends Item {
         }
 
         itemStack.damage(1, user, playerEntity -> playerEntity.sendToolBreakStatus(hand));
-        user.getItemCooldownManager().set(this, 40);
+        user.getItemCooldownManager().set(this, 10);
         return super.use(world, user, hand);
     }
 }
