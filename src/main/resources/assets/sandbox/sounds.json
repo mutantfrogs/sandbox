@@ -1,0 +1,10 @@
+{
+  "droopy": {
+    "sounds": [
+      {
+        "name": "sandbox.droopy",
+        "stream": true
+      }
+    ]
+  }
+}

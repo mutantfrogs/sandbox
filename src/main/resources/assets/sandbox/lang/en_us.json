@@ -1,4 +1,7 @@
 {
   "itemgroup.sandbox": "Sandbox",
-  "item.sandbox.handcannon": "Hand Cannon"
+  "item.sandbox.handcannon": "Hand Cannon",
+  "item.sandbox": "Droopy",
+  "item.sandbox.droopy": "Droopy",
+  "item.sandbox.droopy.desc": "C418 - Droopy"
 }

@@ -12,8 +12,8 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import java.util.Random;
 
-public class HandCannon extends Item {
-    public HandCannon(Settings settings) {
+public class HandCannonItem extends Item {
+    public HandCannonItem(Settings settings) {
         super(settings.maxDamage(5));
     }
 
