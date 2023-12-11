@@ -8,9 +8,6 @@ import net.minecraft.item.Item;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
-import net.minecraft.potion.PotionUtil;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -43,7 +40,7 @@ public class LightningInABottleEntity extends ThrownItemEntity {
         //summon lightning entity on collision
         World world = getWorld();
         Vec3d hitPos = hitResult.getPos();
-        world.syncWorldEvent(WorldEvents.SPLASH_POTION_SPLASHED, this.getBlockPos(), 0xd5e4ec);
+        world.syncWorldEvent(WorldEvents.SPLASH_POTION_SPLASHED, this.getBlockPos(), 0x62fff0);
         LightningEntity lightning = new LightningEntity(EntityType.LIGHTNING_BOLT, world);
         lightning.setPosition(hitPos.x, hitPos.y, hitPos.z);
         world.spawnEntity(lightning);
