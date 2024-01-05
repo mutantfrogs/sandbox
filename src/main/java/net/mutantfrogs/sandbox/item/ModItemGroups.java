@@ -9,6 +9,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.mutantfrogs.sandbox.Sandbox;
+import net.mutantfrogs.sandbox.block.ModBlocks;
 
 public class ModItemGroups {
     public static final ItemGroup SANDBOX_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -18,6 +19,8 @@ public class ModItemGroups {
                         entries.add(ModItems.HANDCANNON);
                         entries.add(ModItems.LIGHTNING_IN_A_BOTTLE);
                         entries.add(ModItems.DROOPY );
+                        entries.add(ModItems.WRENCH);
+                        entries.add(ModBlocks.QUARTZ_TILE);
 
                     }).build());
 

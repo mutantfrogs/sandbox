@@ -2,6 +2,7 @@ package net.mutantfrogs.sandbox;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.mutantfrogs.sandbox.block.ModBlocks;
 import net.mutantfrogs.sandbox.item.ModItemGroups;
 import net.mutantfrogs.sandbox.item.ModItems;
 import net.mutantfrogs.sandbox.sound.ModSounds;
@@ -15,11 +16,9 @@ public class Sandbox implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
+		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModSounds.registerSounds();
-
-
-
 	}
 }
