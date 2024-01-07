@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
@@ -46,28 +47,59 @@ public class WrenchItem extends Item {
                 BlockState newState = blockState.with(AXIS, rotatedAxis);
                 world.setBlockState(blockPos, newState, 3);
                 world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_FISHING_BOBBER_RETRIEVE, SoundCategory.PLAYERS, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+
+                Sandbox.LOGGER.info("Current Axis: " + currentAxis);
+
                 return ActionResult.SUCCESS;
             }
 
             if (blockState.contains(FACING)) {
                 Direction currentFacing = blockState.get(FACING);
-                Direction rotatedFacing = rotateHorizontalClockwise(currentFacing);
+                Direction rotatedFacing = rotateHorizontal(currentFacing);
 
                 BlockState newState = blockState.with(FACING, rotatedFacing);
                 world.setBlockState(blockPos, newState, 3);
                 world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_FISHING_BOBBER_RETRIEVE, SoundCategory.PLAYERS, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+
+                Sandbox.LOGGER.info("Current Facing: " + currentFacing);
+
+                return ActionResult.SUCCESS;
+            }
+
+            if (blockState.contains(Properties.FACING)) {
+                Direction currentFacing = blockState.get(Properties.FACING);
+                Direction rotatedFacing = rotateAll(currentFacing);
+
+                BlockState newState = blockState.with(Properties.FACING, rotatedFacing);
+                world.setBlockState(blockPos, newState, 3);
+                world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_FISHING_BOBBER_RETRIEVE, SoundCategory.PLAYERS, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+
+                Sandbox.LOGGER.info("Current Facing: " + currentFacing);
+
                 return ActionResult.SUCCESS;
             }
 
         return super.useOnBlock(context);
     }
 
-    private Direction rotateHorizontalClockwise(Direction direction) {
+    private Direction rotateHorizontal(Direction direction) {
         switch (direction) {
             case NORTH: return Direction.EAST;
             case EAST: return Direction.SOUTH;
             case SOUTH: return Direction.WEST;
             case WEST: return Direction.NORTH;
+            default: return direction;
+        }
+    }
+
+    private Direction rotateAll(Direction direction) {
+        switch (direction) {
+            case NORTH: return Direction.EAST;
+            case EAST: return Direction.SOUTH;
+            case SOUTH: return Direction.WEST;
+            case WEST: return Direction.UP;
+            case UP: return Direction.DOWN;
+            case DOWN: return Direction.NORTH;
             default: return direction;
         }
     }
