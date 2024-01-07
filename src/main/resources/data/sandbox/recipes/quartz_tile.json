@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:quartz_bricks"
+    }
+  ],
+  "result": {
+    "item": "sandbox:quartz_tile",
+    "count": 1
+  }
+}

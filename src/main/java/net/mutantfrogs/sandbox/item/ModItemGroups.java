@@ -16,11 +16,11 @@ public class ModItemGroups {
             new Identifier(Sandbox.MOD_ID, "ruby"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.sandbox"))
                     .icon(() -> new ItemStack(Items.SAND)).entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.QUARTZ_TILE);
                         entries.add(ModItems.HANDCANNON);
                         entries.add(ModItems.LIGHTNING_IN_A_BOTTLE);
-                        entries.add(ModItems.DROOPY );
                         entries.add(ModItems.WRENCH);
-                        entries.add(ModBlocks.QUARTZ_TILE);
+                        entries.add(ModItems.DROOPY);
 
                     }).build());
 

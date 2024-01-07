@@ -14,8 +14,7 @@ import net.mutantfrogs.sandbox.Sandbox;
 
 public class ModBlocks {
 
-    public static final Block QUARTZ_TILE = registerBlock("quartz_tile",
-        new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK)));
+    public static final Block QUARTZ_TILE = registerBlock("quartz_tile", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK)));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
