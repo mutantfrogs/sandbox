@@ -1,14 +1,17 @@
 package net.mutantfrogs.sandbox.item.custom;
 
 import net.minecraft.block.*;
+import net.minecraft.block.enums.BlockHalf;
 import net.minecraft.block.enums.SlabType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
@@ -46,10 +49,15 @@ public class WrenchItem extends Item {
                 Direction currentFacing = blockState.get(FACING);
                 Direction rotatedFacing = rotateHorizontal(currentFacing);
 
-                /*// additional logic for flipping stairs
-                if(blockState.contains(Properties.BLOCK_HALF)){
-
-                }*/
+                // additional logic for flipping stairs
+                if(blockState.contains(Properties.BLOCK_HALF) && rotatedFacing == Direction.WEST){
+                    BlockHalf halfState = blockState.get(Properties.BLOCK_HALF);
+                    halfState = (halfState == BlockHalf.TOP) ? BlockHalf.BOTTOM : BlockHalf.TOP;
+                    BlockState newHalfState = blockState.with(Properties.BLOCK_HALF, halfState).with(FACING, rotatedFacing);
+                    world.setBlockState(blockPos, newHalfState, 3);
+                    world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_FISHING_BOBBER_RETRIEVE, SoundCategory.PLAYERS, 1f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+                    return ActionResult.SUCCESS;
+                }
 
                 BlockState newState = blockState.with(FACING, rotatedFacing);
                 world.setBlockState(blockPos, newState, 3);
