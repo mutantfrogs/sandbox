@@ -34,6 +34,10 @@ public class LightningInABottleEntity extends ThrownItemEntity {
     public Packet<ClientPlayPacketListener> createSpawnPacket() {
         return new EntitySpawnS2CPacket(this);
     }
+    @Override
+    protected float getGravity() {
+        return 0.05f;
+    }
 
     @Override
     protected void onCollision(HitResult hitResult) {
