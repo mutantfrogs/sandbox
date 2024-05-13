@@ -8,6 +8,7 @@ import net.mutantfrogs.sandbox.Sandbox;
 
 public class ModSounds {
     public static final SoundEvent DROOPY = registerSoundEvent("droopy");
+    public static final SoundEvent BRUH = registerSoundEvent("bruh");
 
     private static SoundEvent registerSoundEvent(String name){
         Identifier id = new Identifier(Sandbox.MOD_ID, name);

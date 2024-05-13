@@ -17,6 +17,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.sandbox"))
                     .icon(() -> new ItemStack(Items.SAND)).entries((displayContext, entries) -> {
                         entries.add(ModBlocks.QUARTZ_TILE);
+                        entries.add(ModBlocks.AMETHYST_RESONATOR);
                         entries.add(ModItems.HANDCANNON);
                         entries.add(ModItems.LIGHTNING_IN_A_BOTTLE);
                         entries.add(ModItems.WRENCH);

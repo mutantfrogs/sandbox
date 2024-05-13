@@ -3,7 +3,8 @@
 	"package": "net.mutantfrogs.sandbox.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ResonatorFunctionalityMixin",
+		"ResonatorsInstrumentsMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
