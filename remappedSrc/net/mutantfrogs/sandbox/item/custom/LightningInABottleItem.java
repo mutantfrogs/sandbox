@@ -12,14 +12,13 @@ import net.minecraft.world.World;
 import net.mutantfrogs.sandbox.entity.custom.LightningInABottleEntity;
 
 public class LightningInABottleItem extends Item {
-    public LightningInABottleItem(Settings settings) {
+    public LightningInABottleItem(net.minecraft.item.Item.Settings settings) {
         super(settings);
     }
     @Override
     public boolean hasGlint(ItemStack stack) {
         return true;
     }
-    /*
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
@@ -38,7 +37,5 @@ public class LightningInABottleItem extends Item {
         }
         return TypedActionResult.success(itemStack, world.isClient());
     }
-
-     */
 
 }

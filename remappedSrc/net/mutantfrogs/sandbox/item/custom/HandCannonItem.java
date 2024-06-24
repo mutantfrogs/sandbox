@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 import java.util.Random;
 
 public class HandCannonItem extends Item {
-    public HandCannonItem(Settings settings) {
+    public HandCannonItem(net.minecraft.item.Item.Settings settings) {
         super(settings.maxDamage(5));
     }
 
