@@ -22,6 +22,7 @@ public class ModItemGroups {
                         entries.add(ModItems.LIGHTNING_IN_A_BOTTLE);
                         entries.add(ModItems.WRENCH);
                         entries.add(ModItems.DROOPY);
+                        entries.add(ModItems.SPEED_RING);
 
                     }).build());
 
