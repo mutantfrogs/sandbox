@@ -15,7 +15,7 @@ import net.minecraft.world.WorldEvents;
 import net.mutantfrogs.sandbox.entity.ModEntities;
 import net.mutantfrogs.sandbox.item.ModItems;
 
-public class LightningInABottleEntity {/*extends ThrownItemEntity {
+public class LightningInABottleEntity extends ThrownItemEntity {
 
     public LightningInABottleEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
@@ -24,7 +24,6 @@ public class LightningInABottleEntity {/*extends ThrownItemEntity {
     public LightningInABottleEntity(LivingEntity livingEntity, World world) {
         super(ModEntities.LIGHTNING_IN_A_BOTTLE_ENTITY, livingEntity, world);
     }
-
 
     @Override
     protected Item getDefaultItem() {
@@ -53,6 +52,5 @@ public class LightningInABottleEntity {/*extends ThrownItemEntity {
         this.discard();
         super.onCollision(hitResult);
     }
-    */
 }
 

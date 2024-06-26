@@ -11,11 +11,9 @@ import net.mutantfrogs.sandbox.Sandbox;
 import net.mutantfrogs.sandbox.entity.custom.LightningInABottleEntity;
 
 public class ModEntities {
-   /* public static final EntityType<LightningInABottleEntity> LIGHTNING_IN_A_BOTTLE_ENTITY = Registry.register(Registries.ENTITY_TYPE,
-            Identifier.of(Sandbox.MOD_ID, "lightning_in_a_bottle_entity"),
+    public static final EntityType<LightningInABottleEntity> LIGHTNING_IN_A_BOTTLE_ENTITY = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(Sandbox.MOD_ID, "lightning_in_a_bottle_entity"),
             FabricEntityTypeBuilder.<LightningInABottleEntity>create(SpawnGroup.MISC, LightningInABottleEntity::new)
                     .dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build());
 
-
-    */
 }

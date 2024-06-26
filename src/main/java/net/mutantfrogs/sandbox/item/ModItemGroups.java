@@ -13,7 +13,7 @@ import net.mutantfrogs.sandbox.block.ModBlocks;
 
 public class ModItemGroups {
     public static final ItemGroup SANDBOX_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(Sandbox.MOD_ID, "ruby"),
+            new Identifier(Sandbox.MOD_ID, "ruby"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.sandbox"))
                     .icon(() -> new ItemStack(Items.SAND)).entries((displayContext, entries) -> {
                         entries.add(ModBlocks.QUARTZ_TILE);
@@ -21,7 +21,7 @@ public class ModItemGroups {
                         entries.add(ModItems.HANDCANNON);
                         entries.add(ModItems.LIGHTNING_IN_A_BOTTLE);
                         entries.add(ModItems.WRENCH);
-                        //entries.add(ModItems.DROOPY);
+                        entries.add(ModItems.DROOPY);
 
                     }).build());
 

@@ -17,7 +17,6 @@ public class HandCannonItem extends Item {
         super(settings.maxDamage(5));
     }
 
-    /*
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
@@ -48,9 +47,5 @@ public class HandCannonItem extends Item {
         }
         return super.use(world, user, hand);
     }
-        */
-
 }
-
-
 

@@ -1,6 +1,9 @@
 package net.mutantfrogs.sandbox.block;
 
+import net.fabricmc.fabric.api.block.v1.FabricBlock;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AmethystBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
@@ -18,10 +21,10 @@ public class ModBlocks {
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(Sandbox.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, new Identifier(Sandbox.MOD_ID, name), block);
     }
     private static Item registerBlockItem(String name, Block block){
-        return Registry.register(Registries.ITEM, Identifier.of(Sandbox.MOD_ID, name), new BlockItem(block, new Item.Settings()));
+        return Registry.register(Registries.ITEM, new Identifier(Sandbox.MOD_ID, name), new BlockItem(block, new FabricItemSettings()));
     }
     public static void registerModBlocks(){
         Sandbox.LOGGER.info("Registering ModBlocks for" + Sandbox.MOD_ID);

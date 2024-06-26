@@ -8,6 +8,6 @@ import net.mutantfrogs.sandbox.entity.ModEntities;
 public class SandboxClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        //EntityRendererRegistry.register(ModEntities.LIGHTNING_IN_A_BOTTLE_ENTITY, FlyingItemEntityRenderer::new);
+        EntityRendererRegistry.register(ModEntities.LIGHTNING_IN_A_BOTTLE_ENTITY, FlyingItemEntityRenderer::new);
     }
 }
