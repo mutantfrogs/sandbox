@@ -1,8 +1,11 @@
 {
+
   "entities": [
     "player"
   ],
   "slots": [
-    "hand/ring"
+    "sandbox/equipment1",
+    "sandbox/equipment2",
+    "sandbox/equipment3"
   ]
 }

@@ -6,5 +6,9 @@
   "item.sandbox.droopy.desc": "C418 - droopy",
   "item.sandbox.wrench": "Wrench",
   "block.sandbox.quartz_tile": "Quartz Tile",
-  "block.sandbox.amethyst_resonator": "Amethyst Resonator"
+  "block.sandbox.amethyst_resonator": "Amethyst Resonator",
+  "item.sandbox.speed_ring": "Speed Ring",
+  "trinkets.slot.sandbox.equipment1": "Slot 1",
+  "trinkets.slot.sandbox.equipment2": "Slot 2",
+  "trinkets.slot.sandbox.equipment3": "Slot 3"
 }
